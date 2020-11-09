@@ -4,6 +4,7 @@ import os
 from PIL import Image
 import wiring
 import wordclock_plugins.time_default.time_english as time_english
+import wordclock_plugins.time_default.time_english_c3jr as time_english_c3jr
 import wordclock_plugins.time_default.time_german as time_german
 import wordclock_plugins.time_default.time_german2 as time_german2
 import wordclock_plugins.time_default.time_dutch as time_dutch
@@ -77,6 +78,8 @@ class wordclock_display:
             self.taw = time_dutch.time_dutch()
         elif language == 'english':
             self.taw = time_english.time_english()
+        elif language == 'english_c3jr':
+            self.taw = time_english_c3jr.time_english()    
         elif language == 'german':
             self.taw = time_german.time_german()
         elif language == 'german2':
